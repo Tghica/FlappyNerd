@@ -20,7 +20,7 @@ public class BirdMove : MonoBehaviour
         transform.position += new Vector3(0f, currentSpeed * Time.deltaTime, 0f);
 
 
-        /*timerRotation += Time.deltaTime;
+        timerRotation += Time.deltaTime;
         if (timerRotation > limitRotation)
         {
             timerRotation = 0f;
@@ -29,6 +29,6 @@ public class BirdMove : MonoBehaviour
                 unghi -= 20f;
                 transform.rotation = Quaternion.Euler(0f, 0f, unghi);
             }
-        }*/
+        }
     }
 }

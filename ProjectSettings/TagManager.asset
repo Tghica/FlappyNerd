@@ -47,6 +47,9 @@ TagManager:
   - name: Pipes
     uniqueID: 4240926965
     locked: 0
+  - name: New Layer 5
+    uniqueID: 1494982785
+    locked: 0
   - name: Bird
     uniqueID: 3382420489
     locked: 0
