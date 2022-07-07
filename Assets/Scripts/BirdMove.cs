@@ -37,5 +37,5 @@ public class BirdMove : MonoBehaviour
         gravity = 0f;
         currentSpeed = 0;
         initialSpeed = 0;
-    }
+    } 
 }
