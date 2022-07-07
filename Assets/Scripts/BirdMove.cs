@@ -31,4 +31,11 @@ public class BirdMove : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(1);
+        gravity = 0f;
+        currentSpeed = 0;
+        initialSpeed = 0;
+    }
 }
