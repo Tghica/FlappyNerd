@@ -6,7 +6,7 @@ public class BackGroundRotationsScript : MonoBehaviour
 {
     public float speed = 3;
 
-    private float limitx = -17.90f;
+    private float limitx = -17.85f;
     private Vector3 p;
     public Vector3 pos;
     void Update()

@@ -17,7 +17,7 @@ public class PipesUpAndDownScript : MonoBehaviour
         if (transform.position.x <= limitx)
         {
             p = transform.position;
-            p.y = Random.Range(-1.5f, 2f);
+            p.y = Random.Range(-1f, 2f);
             p.x = -p.x;
             transform.position = p;
         }
