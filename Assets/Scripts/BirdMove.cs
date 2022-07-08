@@ -17,12 +17,13 @@ public class BirdMove : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                GetComponent<EggLayingScript>().SpawnEgg();
                 currentSpeed = initialSpeed;
             }
             currentSpeed -= gravity * Time.deltaTime;
             transform.position += new Vector3(0f, currentSpeed * Time.deltaTime, 0f);
-
-
+            Debug.Log(1);
+            /*
             timerRotation += Time.deltaTime;
             if (timerRotation > limitRotation)
             {
@@ -33,15 +34,18 @@ public class BirdMove : MonoBehaviour
                     transform.rotation = Quaternion.Euler(0f, 0f, unghi);
                 }
             }
+            */
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Eggs"))
+        {
+            return;
+        }
+
         lost = true;
         GetComponent<Rigidbody2D>().gravityScale = 1;
-        Debug.Log(1);
-        gravity = 0f;
-        currentSpeed = 0;
-        initialSpeed = 0;
+        GetComponent<Collider2D>().isTrigger = false;
     } 
 }
